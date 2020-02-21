@@ -54,7 +54,7 @@
     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
     <#if palest?has_content>
         <#list palest as pag>
-            <li class="active"><a href="/notes/${pag}">${pag}</a></li>
+            <li class="active"><a href="/search1/${pag}?searchName=${search}">${pag}</a></li>
         </#list>
     </#if>
     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
