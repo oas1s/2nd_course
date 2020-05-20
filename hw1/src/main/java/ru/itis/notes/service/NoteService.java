@@ -1,6 +1,9 @@
 package ru.itis.notes.service;
 
+import javafx.scene.control.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import ru.itis.notes.entity.NoteEntity;
 import ru.itis.notes.repositories.NoteRepository;
@@ -21,7 +24,11 @@ public class NoteService {
         return noteRepository.findAll();
     }
 
-    public List<NoteEntity> findByName(String name) {
-        return noteRepository.findAllByNameStartingWith(name);
+    public Page<NoteEntity> findallPag(Pageable pagination) {
+        return noteRepository.findAll(pagination);
+    }
+
+    public Page<NoteEntity> findByName(String name, Pageable pageable) {
+        return noteRepository.findAllByNameStartingWith(name, pageable);
     }
 }

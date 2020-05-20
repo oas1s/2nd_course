@@ -21,7 +21,7 @@
     </div>
 </nav>
 <h1 align="center">Ur notes</h1>
-<form method="get" action="/search1/1">
+<form method="get" action="/search1/0">
     <div class="row" style="margin-left: 35%">
         <div class="input-field col s6">
             <input id="nameofnote" type="text" name="searchName" class="validate">
@@ -50,7 +50,7 @@
 <#else>
     <p>no notes in ur notebook</p>
 </#if>
-<ul class="pagination">
+<ul class="pagination" style="margin-left: 47%;">
     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
     <#if palest?has_content>
         <#list palest as pag>

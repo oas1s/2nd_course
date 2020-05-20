@@ -19,6 +19,6 @@ public class AppCheck implements CommandLineRunner {
         NoteEntity note = new NoteEntity().builder().id(1L).name("dasdasdas").text("adsasdasd").build();
         noteService.addNote(note);
 //        System.out.println(noteService.findAll());
-        System.out.println(noteService.findByName(note.getName()));
+//        System.out.println(noteService.findByName(note.getName()));
     }
 }
